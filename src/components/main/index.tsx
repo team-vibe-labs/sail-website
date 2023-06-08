@@ -14,7 +14,7 @@ import {
 import NextLink from "next/link";
 
 import { Header } from "@components";
-import { SailIcon } from "@components/sailIcon";
+import { SailedIcon } from "@components/sailedIcon";
 
 export const Main: React.FC = () => {
   const theme = useTheme();
@@ -44,7 +44,7 @@ export const Main: React.FC = () => {
           mt={{ base: 12, md: 2 }}
           mb={1}
         >
-          <SailIcon width="2em" aria-label="Sail" />
+          <SailedIcon width="4em" aria-label="Sailed" />
         </Text>
         <Text
           color="white"
@@ -151,7 +151,7 @@ export const Main: React.FC = () => {
             connections!
           </Text>
           <Text>
-            So, how does Sail work? It's a breeze! You start by creating a
+            So, how does Sailed work? It's a breeze! You start by creating a
             profile for yourself and adding or inviting your friends. Your
             personalized feed will showcase pairs of friends who could be a
             great match. Simply swipe left to dismiss a pair or swipe right to

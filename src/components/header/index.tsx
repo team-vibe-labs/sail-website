@@ -18,7 +18,7 @@ export const Header: React.FC = () => {
         <ButtonGroup gap="2">
           <NextLink href="/#about" passHref>
             <Button color="black" variant="link">
-              What's Sail?
+              What's Sailed?
             </Button>
           </NextLink>
           <NextLink href="/#faq" passHref>
