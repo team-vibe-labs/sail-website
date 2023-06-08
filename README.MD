@@ -1,5 +1,6 @@
 # sail
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5621179e-c2e4-4dfd-8e14-15b37a09af7b/deploy-status)](https://app.netlify.com/sites/imaginative-medovik-05c253/deploys)
 
 This project was generated with [superplate](https://github.com/pankod/superplate).
 
