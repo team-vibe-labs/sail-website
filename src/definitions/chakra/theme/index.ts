@@ -14,9 +14,13 @@ import fontSizes from "./foundations/fontSizes";
  */
 
 const overrides = {
-    ...styles,
-    colors,
-    fontSizes,
+  ...styles,
+  colors,
+  fontSizes,
+  fonts: {
+    heading: `'Source Sans Pro', sans-serif`,
+    body: `'Source Sans Pro', sans-serif`,
+  },
 };
 
 const theme = extendTheme(overrides);

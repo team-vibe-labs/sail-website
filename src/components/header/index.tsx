@@ -1,12 +1,33 @@
 import React from "react";
-import { Center } from "@chakra-ui/react";
-
-import { Logo } from "@components";
+import { Box, Button, ButtonGroup, Center, Spacer } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 export const Header: React.FC = () => {
-    return (
-        <Center bg="header.100"  >
-            <Logo />
-        </Center>
-    );
+  return (
+    <Box
+      textAlign="center"
+      display="flex"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      pt={6}
+      pb={2}
+    >
+      <Center gap="2" minWidth={{ base: "90%", md: "48em" }}>
+        <Spacer />
+        <ButtonGroup gap="2">
+          <NextLink href="/#about" passHref>
+            <Button color="black" variant="link">
+              What's Sail?
+            </Button>
+          </NextLink>
+          <NextLink href="/#faq" passHref>
+            <Button color="black" variant="link">
+              FAQ
+            </Button>
+          </NextLink>
+        </ButtonGroup>
+      </Center>
+    </Box>
+  );
 };
