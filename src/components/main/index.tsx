@@ -5,10 +5,10 @@ import {
   Center,
   Heading,
   Text,
-  Image,
   Avatar,
   AvatarBadge,
   Flex,
+  Image,
   Button,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
@@ -27,22 +27,16 @@ export const Main: React.FC = () => {
       alignItems="center"
       overflowX={"hidden"}
     >
-      <Box
-        bgGradient="radial(#CF96F8, white)"
-        minW="100vw"
-        minH="100vh"
-        pb={16}
-      >
+      <Box bgGradient="radial(#991BFC, white)" minW="100vw" minH="100vh" pb={8}>
         <Header />
+        <Image pt={{ base: 6, md: 0 }} mx="auto" src="sailed-logo.png" />
         <Text
           color="white"
           style={{
             fontSize: theme.fontSizes["6xl"],
             fontWeight: "bold",
-            letterSpacing: 1,
           }}
-          mt={{ base: 12, md: 2 }}
-          mb={1}
+          my={0}
         >
           <SailedIcon width="4em" aria-label="Sailed" />
         </Text>
@@ -54,7 +48,7 @@ export const Main: React.FC = () => {
         >
           Match your friends
         </Text>
-        <Box my={8}>
+        <Box mb={8}>
           <Flex mb={2}>
             <Image
               marginLeft="auto"
@@ -72,47 +66,27 @@ export const Main: React.FC = () => {
               border="0.25em solid lightblue"
             />
           </Flex>
-          <Avatar
-            size="lg"
-            src="https://randomuser.me/api/portraits/women/28.jpg"
-            border="0.1em solid white"
-          >
+          <Avatar size="lg" src="a1.png" border="0.1em solid darkcyan">
             <AvatarBadge bg="white" boxSize="1.3em">
               👍
             </AvatarBadge>
           </Avatar>
-          <Avatar
-            size="lg"
-            src="https://randomuser.me/api/portraits/men/18.jpg"
-            border="0.1em solid gray"
-          >
+          <Avatar size="lg" src="a2.png" border="0.1em solid white">
             <AvatarBadge bg="white" boxSize="1.3em">
               ⛵
             </AvatarBadge>
           </Avatar>
-          <Avatar
-            size="lg"
-            src="https://randomuser.me/api/portraits/women/90.jpg"
-            border="0.1em solid green"
-          >
+          <Avatar size="lg" src="a9.png" border="0.1em solid black">
             <AvatarBadge bg="white" boxSize="1.3em">
               🥰
             </AvatarBadge>
           </Avatar>
-          <Avatar
-            size="lg"
-            src="https://randomuser.me/api/portraits/men/4.jpg"
-            border="0.1em solid orange"
-          >
+          <Avatar size="lg" src="a7.png" border="0.1em solid #6C7B44">
             <AvatarBadge bg="white" boxSize="1.3em">
               🙌
             </AvatarBadge>
           </Avatar>
-          <Avatar
-            size="lg"
-            src="https://randomuser.me/api/portraits/men/55.jpg"
-            border="0.1em solid black"
-          >
+          <Avatar size="lg" src="a10.png" border="0.1em solid #EA9341">
             <AvatarBadge bg="white" boxSize="1.3em">
               👍
             </AvatarBadge>
@@ -140,6 +114,7 @@ export const Main: React.FC = () => {
             marginBottom={10}
             id="about"
             fontSize={{ base: 25, md: 36 }}
+            color="#991BFC"
           >
             So ... What are we? 😳
           </Heading>
@@ -171,6 +146,7 @@ export const Main: React.FC = () => {
             paddingTop={24}
             id="faq"
             fontSize={{ base: 25, md: 36 }}
+            color="#991BFC"
           >
             FAQ 🙋‍♂️
           </Heading>
