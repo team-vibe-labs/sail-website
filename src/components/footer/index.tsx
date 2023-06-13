@@ -3,7 +3,7 @@ import { Center, Text } from "@chakra-ui/react";
 
 export const Footer: React.FC = () => {
   return (
-    <Center py={8} bgGradient="linear(to-t, #CF96F8, white)">
+    <Center py={8} bgGradient="linear(to-t, #991BFC, white)">
       <Text
         pt={8}
         fontSize={{ base: 12, md: 16 }}
