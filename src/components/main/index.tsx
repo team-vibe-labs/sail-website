@@ -27,7 +27,7 @@ export const Main: React.FC = () => {
       alignItems="center"
       overflowX={"hidden"}
     >
-      <Box bgGradient="radial(#991BFC, white)" minW="100vw" minH="100vh" pb={8}>
+      <Box bgGradient="radial(#991BFC, white)" minW="140vw" minH="100vh">
         <Header />
         <Image pt={{ base: 6, md: 0 }} mx="auto" src="sailed-logo.png" />
         <Text
@@ -66,27 +66,47 @@ export const Main: React.FC = () => {
               border="0.25em solid lightblue"
             />
           </Flex>
-          <Avatar size="lg" src="a1.png" border="0.1em solid darkcyan">
+          <Avatar
+            size="lg"
+            src="https://i.imgur.com/klnqxdv.png"
+            border="0.1em solid darkcyan"
+          >
             <AvatarBadge bg="white" boxSize="1.3em">
               👍
             </AvatarBadge>
           </Avatar>
-          <Avatar size="lg" src="a2.png" border="0.1em solid white">
+          <Avatar
+            size="lg"
+            src="https://i.imgur.com/9NTVYar.png"
+            border="0.1em solid #E1D8DD"
+          >
             <AvatarBadge bg="white" boxSize="1.3em">
               ⛵
             </AvatarBadge>
           </Avatar>
-          <Avatar size="lg" src="a9.png" border="0.1em solid black">
+          <Avatar
+            size="lg"
+            src="https://i.imgur.com/tmaPKpo.png"
+            border="0.1em solid black"
+          >
             <AvatarBadge bg="white" boxSize="1.3em">
               🥰
             </AvatarBadge>
           </Avatar>
-          <Avatar size="lg" src="a7.png" border="0.1em solid #6C7B44">
+          <Avatar
+            size="lg"
+            src="https://i.imgur.com/2iihft3.png"
+            border="0.1em solid #6C7B44"
+          >
             <AvatarBadge bg="white" boxSize="1.3em">
               🙌
             </AvatarBadge>
           </Avatar>
-          <Avatar size="lg" src="a10.png" border="0.1em solid #EA9341">
+          <Avatar
+            size="lg"
+            src="https://i.imgur.com/MuwiOjn.png"
+            border="0.1em solid #EA9341"
+          >
             <AvatarBadge bg="white" boxSize="1.3em">
               👍
             </AvatarBadge>
