@@ -121,19 +121,14 @@ export const Main: React.FC = () => {
           <Text>
             We’re the app that empowers you to take charge of your friends' love
             lives! Our goal is to make matchmaking and dating a delightful and
-            effortless experience for you and your inner circle. Wave goodbye to
-            those cringe-worthy blind dates and say hello to meaningful
-            connections!
+            effortless experience for you and your inner circle.
           </Text>
           <Text>
-            So, how does Sailed work? It's a breeze! You start by creating a
-            profile for yourself and adding or inviting your friends. Your
-            personalized feed will showcase pairs of friends who could be a
-            great match. Simply swipe left to dismiss a pair or swipe right to
-            show your approval. You also have the option to manually search for
-            two friends and match them together. You'll receive a match
-            notification whenever a friend of yours swipes right on you and
-            another person!
+          So, how does Sailed work? It's a breeze!
+          Start by creating an account and inviting your friends.
+          Then choose a friend to match and start swiping on recommended partners.
+          Swipe right to ship someone with your friend and wait to see the reactions from your other friends. 
+          If your ship gets enough love, sail the ship!
           </Text>
 
           <Text>
@@ -155,29 +150,30 @@ export const Main: React.FC = () => {
           </Text>
           <Text>
             Yes! You can toggle a setting in your profile that prevents you from
-            being matched with others.
+            being shipped with others.
           </Text>
 
-          <Text fontWeight={"bold"}>Q: Who will I be matched with?</Text>
+          <Text fontWeight={"bold"}>Q: What's a ship? What's a sail?</Text>
 
           <Text>
-            You will be matched with people that are approved by your friends.
+            When a friend is matchmaking for another friend and they swipe right on a potential partner,
+            we call it a "ship". If the ship is approved by enough friends, then it becomes a match, which we call a "sail".
+          </Text>
+
+          <Text fontWeight={"bold"}>Q: What needs to happen for a ship to be sailed?</Text>
+
+          <Text>
+            Once a ship is created between two people, it'll be shown to friends of both people.
+            The friends can add reactions of approval or disapproval and also add comments. If there
+            are enough positive reactions by friends of both people, the ship will be sailed!
           </Text>
 
           <Text fontWeight={"bold"}>
-            Q: Can I message or communicate with people I’m matched with?
+            Q: Can I message or communicate with people I’m shipped with?
           </Text>
 
           <Text>
             Definitely! You can message matches with our built-in chat feature.
-          </Text>
-
-          <Text fontWeight={"bold"}>Q: Who can see my profile?</Text>
-
-          <Text>
-            Your friends will be able to see your profile at any time. Also,
-            friends of your friends will be able to see your profile while
-            matchmaking.
           </Text>
 
           <Text fontWeight={"bold"}>
