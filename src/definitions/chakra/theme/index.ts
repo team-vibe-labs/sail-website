@@ -18,8 +18,8 @@ const overrides = {
   colors,
   fontSizes,
   fonts: {
-    heading: `'Source Sans Pro', sans-serif`,
-    body: `'Source Sans Pro', sans-serif`,
+    heading: `'Inter', sans-serif`,
+    body: `'Inter', sans-serif`,
   },
 };
 

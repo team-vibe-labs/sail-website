@@ -3,11 +3,11 @@ import { Center, Text } from "@chakra-ui/react";
 
 export const Footer: React.FC = () => {
   return (
-    <Center py={8} bgGradient="linear(to-t, #991BFC, white)">
+    <Center py={8}>
       <Text
         pt={8}
         fontSize={{ base: 12, md: 16 }}
-        color="white"
+        color="black"
         fontWeight="bold"
       >
         © Copyright 2023 Vibe Labs. All Rights Reserved.

@@ -13,16 +13,16 @@ export const Header: React.FC = () => {
       pt={4}
       pb={2}
     >
-      <Center gap="2" minWidth={{ base: "90%", md: "48em" }}>
+      <Center gap="2" minWidth={{ base: "60%", md: "48em" }}>
         <Spacer />
         <ButtonGroup gap="2">
           <NextLink href="/#about" passHref>
-            <Button color="white" variant="link">
+            <Button color="black" variant="link">
               What's Sailed?
             </Button>
           </NextLink>
           <NextLink href="/#faq" passHref>
-            <Button color="white" variant="link">
+            <Button color="black" variant="link">
               FAQ
             </Button>
           </NextLink>
