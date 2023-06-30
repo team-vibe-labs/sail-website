@@ -27,9 +27,9 @@ export const Main: React.FC = () => {
       alignItems="center"
       overflowX={"hidden"}
     >
-      <Box bgGradient="radial(#991BFC, white)" minW="140vw" minH="100vh">
+      <Box minW="140vw" minH="100vh">
         <Header />
-        <Image pt={{ base: 6, md: 0 }} mx="auto" src="sailed-logo.png" />
+        <Image pt={{ base: 6, md: 0 }} mx="auto" src="/sailed-logo.png" />
         <Text
           color="white"
           style={{
