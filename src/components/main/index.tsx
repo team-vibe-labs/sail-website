@@ -12,6 +12,7 @@ import {
   Button,
   Spacer,
   Show,
+  Fade,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 
@@ -35,7 +36,7 @@ export const Main: React.FC = () => {
         w={{ base: "600px", md: "690px" }}
         top={{ base: "-201", md: "-251" }}
         left={{ base: "-280", md: "-380" }}
-        src="/blob2.png"
+        src="https://d1zzqqpsok2fq2.cloudfront.net/blob2.png"
         zIndex={-1000}
       />
       <Box minW="140vw" minH="100vh" position="relative">
@@ -45,7 +46,7 @@ export const Main: React.FC = () => {
           mx="auto"
           w="454px"
           h="162px"
-          src="/sailed-logo.png"
+          src="https://d1zzqqpsok2fq2.cloudfront.net/sailed-logo.png"
         />
         <Text
           mt={-4}
@@ -63,14 +64,14 @@ export const Main: React.FC = () => {
               marginRight={-5}
               boxSize={{ base: "11em", md: "20em" }}
               borderRadius="full"
-              src="p1.jpg"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/p1.jpg"
               border="0.25em solid"
             />
             <Image
               marginRight="auto"
               boxSize={{ base: "11em", md: "20em" }}
               borderRadius="full"
-              src="p2.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/p2.png"
               border="0.25em solid"
             />
           </Flex>
@@ -78,7 +79,7 @@ export const Main: React.FC = () => {
             mt="-2em"
             mx="auto"
             height={{ base: "4em", md: "6em" }}
-            src="heart.png"
+            src="https://d1zzqqpsok2fq2.cloudfront.net/heart.png"
           />
           <Show above="md">
             <Avatar
@@ -87,7 +88,7 @@ export const Main: React.FC = () => {
               left={{ base: "0px", md: "450px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r1.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r1.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -100,7 +101,7 @@ export const Main: React.FC = () => {
               left={{ base: "0px", md: "550px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r2.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r2.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -113,7 +114,7 @@ export const Main: React.FC = () => {
               left={{ base: "0px", md: "350px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r6.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r6.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -126,7 +127,7 @@ export const Main: React.FC = () => {
               left={{ base: "0px", md: "315px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r7.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r7.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -139,7 +140,7 @@ export const Main: React.FC = () => {
               left={{ base: "0px", md: "543px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r8.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r8.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -152,7 +153,7 @@ export const Main: React.FC = () => {
               right={{ base: "0px", md: "540px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r3.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r3.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -165,7 +166,7 @@ export const Main: React.FC = () => {
               right={{ base: "0px", md: "570px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r4.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r4.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -178,7 +179,7 @@ export const Main: React.FC = () => {
               right={{ base: "0px", md: "450px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r5.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r5.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -191,7 +192,7 @@ export const Main: React.FC = () => {
               right={{ base: "0px", md: "350px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r8.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r8.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -204,7 +205,7 @@ export const Main: React.FC = () => {
               right={{ base: "0px", md: "470px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="r9.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r9.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
@@ -215,7 +216,10 @@ export const Main: React.FC = () => {
         </Box>
         <Flex mt={{ base: "-3em", md: "-5em" }} mx="auto" width="22rem">
           <Spacer />
-          <Image w={{ base: "67px", md: "67px" }} src="/new-doodle.png" />
+          <Image
+            w={{ base: "67px", md: "67px" }}
+            src="https://d1zzqqpsok2fq2.cloudfront.net/new-doodle.png"
+          />
         </Flex>
         <NextLink href="https://forms.gle/j4jbtYBMprtgEyDm6">
           <Button
@@ -240,7 +244,7 @@ export const Main: React.FC = () => {
           w={{ base: "500px", md: "654px" }}
           top={{ base: "451", md: "251" }}
           right={{ base: "-260", md: "-200" }}
-          src="/blob.png"
+          src="https://d1zzqqpsok2fq2.cloudfront.net/blob.png"
           zIndex={-1000}
         />
       </Box>
@@ -262,7 +266,7 @@ export const Main: React.FC = () => {
             w={{ base: "264px", md: "264px" }}
             top="0"
             left="-390"
-            src="/star.png"
+            src="https://d1zzqqpsok2fq2.cloudfront.net/star.png"
             zIndex={-1000}
           />
           <Heading
@@ -306,7 +310,7 @@ export const Main: React.FC = () => {
             w={{ base: "225px", md: "225px" }}
             top="293"
             right="-320"
-            src="/asterisk.png"
+            src="https://d1zzqqpsok2fq2.cloudfront.net/asterisk.png"
             zIndex={-1000}
           />
           <Image
@@ -315,7 +319,7 @@ export const Main: React.FC = () => {
             w={{ base: "512px", md: "512px" }}
             bottom="0"
             left="-620"
-            src="/blob3.png"
+            src="https://d1zzqqpsok2fq2.cloudfront.net/blob3.png"
             zIndex={-1000}
           />
           <Text fontWeight={"bold"}>
