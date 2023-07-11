@@ -21,6 +21,13 @@ const overrides = {
     heading: `'Inter', sans-serif`,
     body: `'Inter', sans-serif`,
   },
+  breakpoints: {
+    sm: "30em", // 480px
+    md: "48em", // 768px
+    lg: "62em", // 992px
+    xl: "80em", // 1280px
+    "3xl": "1920px",
+  },
 };
 
 const theme = extendTheme(overrides);

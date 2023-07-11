@@ -12,6 +12,7 @@ import {
   Show,
   Spinner,
   Image,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { motion } from "framer-motion";
@@ -27,6 +28,11 @@ export const Main: React.FC = () => {
   const MotionButton = motion(Button);
   const MotionCenter = motion(Center);
   const MotionSpinner = motion(Spinner);
+
+  const avatarVariant = useBreakpointValue({
+    base: "lg",
+    "3xl": "xl",
+  });
 
   useEffect(() => {
     if (isLoading && imageRef.current?.complete) {
@@ -71,7 +77,7 @@ export const Main: React.FC = () => {
         animate={{ x: [-25, 10, 0], y: [-25, 10, 0] }}
         mx="auto"
         position="absolute"
-        w={{ base: "600px", md: "690px" }}
+        w={{ base: "600px", md: "690px", "3xl": "900px" }}
         top={{ base: "-201", md: "-251" }}
         left={{ base: "-280", md: "-380" }}
         src="https://d1zzqqpsok2fq2.cloudfront.net/blob2.png"
@@ -83,14 +89,14 @@ export const Main: React.FC = () => {
           pt={{ base: 6, md: 0 }}
           animate={{ y: [-50, 10, 0] }}
           mx="auto"
-          w="454px"
-          h="162px"
+          w={{ base: "454px", "3xl": "681px" }}
+          h={{ base: "162px", "3xl": "243px" }}
           src="https://d1zzqqpsok2fq2.cloudfront.net/sailed-logo.png"
         />
         <MotionText
           mt={-4}
           color="black"
-          fontSize={{ base: "4xl", md: "5xl" }}
+          fontSize={{ base: "4xl", md: "5xl", "3xl": "6xl" }}
           fontWeight="bold"
           animate={{ y: [-50, 10, 0] }}
           mb={0}
@@ -103,7 +109,7 @@ export const Main: React.FC = () => {
               marginLeft="auto"
               animate={{ x: [-100, 25, 0], opacity: [0, 1] }}
               marginRight={-5}
-              boxSize={{ base: "11em", md: "20em" }}
+              boxSize={{ base: "11em", md: "20em", "3xl": "30em" }}
               borderRadius="full"
               src="https://d1zzqqpsok2fq2.cloudfront.net/p1.jpg"
               border="0.25em solid"
@@ -111,7 +117,7 @@ export const Main: React.FC = () => {
             <MotionImage
               marginRight="auto"
               animate={{ x: [100, -25, 0], opacity: [0, 1] }}
-              boxSize={{ base: "11em", md: "20em" }}
+              boxSize={{ base: "11em", md: "20em", "3xl": "30em" }}
               borderRadius="full"
               src="https://d1zzqqpsok2fq2.cloudfront.net/p2.png"
               border="0.25em solid"
@@ -122,18 +128,18 @@ export const Main: React.FC = () => {
             transition={{ repeat: Infinity, duration: 2 }}
             mt="-2em"
             mx="auto"
-            height={{ base: "4em", md: "6em" }}
+            height={{ base: "4em", md: "6em", "3xl": "8em" }}
             src="https://d1zzqqpsok2fq2.cloudfront.net/heart.png"
           />
-          <Show above="md">
+          <Show breakpoint="(min-width: 1150px)">
             <MotionAvatar
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "400px" }}
-              left={{ base: "0px", md: "450px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "50vh" }}
+              left={{ base: "0px", md: "35vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r1.png"
               border="0.1em solid black"
             >
@@ -145,10 +151,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "550px" }}
-              left={{ base: "0px", md: "550px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "73vh" }}
+              left={{ base: "0px", md: "42vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r2.png"
               border="0.1em solid black"
             >
@@ -160,10 +166,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "475px" }}
-              left={{ base: "0px", md: "350px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "65vh" }}
+              left={{ base: "0px", md: "27vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r6.png"
               border="0.1em solid black"
             >
@@ -175,10 +181,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "345px" }}
-              left={{ base: "0px", md: "315px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "47vh" }}
+              left={{ base: "0px", md: "24vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r7.png"
               border="0.1em solid black"
             >
@@ -190,10 +196,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "245px" }}
-              left={{ base: "0px", md: "543px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "34vh" }}
+              left={{ base: "0px", md: "39vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r8.png"
               border="0.1em solid black"
             >
@@ -205,10 +211,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "440px" }}
-              right={{ base: "0px", md: "540px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "52vh" }}
+              right={{ base: "0px", md: "38vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r3.png"
               border="0.1em solid black"
             >
@@ -220,10 +226,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "250px" }}
-              right={{ base: "0px", md: "570px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "30vh" }}
+              right={{ base: "0px", md: "40vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r4.png"
               border="0.1em solid black"
             >
@@ -235,10 +241,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "350px" }}
-              right={{ base: "0px", md: "450px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "38vh" }}
+              right={{ base: "0px", md: "30vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r5.png"
               border="0.1em solid black"
             >
@@ -250,10 +256,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "260px" }}
-              right={{ base: "0px", md: "350px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "21vh" }}
+              right={{ base: "0px", md: "25vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r10.png"
               border="0.1em solid black"
             >
@@ -265,10 +271,10 @@ export const Main: React.FC = () => {
               animate={{ opacity: [0, 1] }}
               transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
-              top={{ base: "0px", md: "535px" }}
-              right={{ base: "0px", md: "470px" }}
-              zIndex={{ base: 0, md: -1000 }}
-              size="lg"
+              top={{ base: "0px", md: "65vh" }}
+              right={{ base: "0px", md: "33vw" }}
+              zIndex={{ base: 0, md: -999 }}
+              size={avatarVariant}
               src="https://d1zzqqpsok2fq2.cloudfront.net/r9.png"
               border="0.1em solid black"
             >
@@ -278,7 +284,11 @@ export const Main: React.FC = () => {
             </MotionAvatar>
           </Show>
         </Box>
-        <Flex mt={{ base: "-3em", md: "-5em" }} mx="auto" width="22rem">
+        <Flex
+          mt={{ base: "-3em", md: "-5em", "3xl": "-4em" }}
+          mx="auto"
+          width="22rem"
+        >
           <Spacer />
           <MotionImage
             animate={{ y: [-5, 5, -5] }}
@@ -297,18 +307,17 @@ export const Main: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            width="17.5rem"
-            height="4.25rem"
+            width={{ base: "17.5rem", "3xl": "26.25rem" }}
+            height={{ base: "4.25rem", "3xl": "6.37rem" }}
             bgColor="#9B51E0"
             _hover={{ bg: "#E893CF" }}
             _active={{ bg: "#E893CF" }}
             color="white"
             variant="solid"
-            size="lg"
             borderRadius="20px"
             border="4px solid black"
             fontWeight="bold"
-            fontSize="1.5rem"
+            fontSize={{ base: "1.5rem", "3xl": "2.25rem" }}
           >
             Join Waitlist
           </MotionButton>
@@ -405,10 +414,8 @@ export const Main: React.FC = () => {
             zIndex={-1000}
           />
           <Image
-            overflowY="hidden"
             position="absolute"
             w={{ base: "512px", md: "512px" }}
-            bottom="0"
             left="-620"
             src="https://d1zzqqpsok2fq2.cloudfront.net/blob3.png"
             zIndex={-1000}
