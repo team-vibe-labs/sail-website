@@ -18,22 +18,60 @@ import { motion } from "framer-motion";
 
 import { Footer, Header } from "@components";
 
+const loadingCircle = {
+  display: "block",
+  width: "1rem",
+  height: "1rem",
+  backgroundColor: "black",
+  borderRadius: "0.5rem",
+};
+
+const loadingContainerVariants = {
+  start: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+  end: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const loadingCircleTransition = {
+  duration: 0.5,
+  yoyo: Infinity,
+  ease: "easeInOut",
+};
+
 export const Main: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const MotionText = motion(Text);
   const MotionImage = motion(Image);
   const MotionAvatar = motion(Avatar);
+  const MotionButton = motion(Button);
+  const MotionCenter = motion(Center);
   const MotionSpinner = motion(Spinner);
 
   setTimeout(() => {
     setIsLoading(false);
-  }, 1000);
+  }, 2000);
 
   if (isLoading) {
     return (
-      <Center minH="100vh">
-        <MotionSpinner size="xl" thickness="0.4em" color="#E893CF" />
-      </Center>
+      <MotionCenter
+        minH="100vh"
+        animate={{ backgroundColor: ["#E893CF", "#FFFFFF"] }}
+        transition={{ duration: 2 }}
+      >
+        <MotionSpinner
+          animate={{ color: ["#FFFFFF", "#E893CF"] }}
+          transition={{ duration: 2 }}
+          size="xl"
+          thickness="0.4em"
+        />
+      </MotionCenter>
     );
   }
 
@@ -273,10 +311,15 @@ export const Main: React.FC = () => {
           />
         </Flex>
         <NextLink href="https://forms.gle/j4jbtYBMprtgEyDm6">
-          <Button
+          <MotionButton
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
             width="17.5rem"
             height="4.25rem"
             bgColor="#9B51E0"
+            _hover={{ bg: "#E893CF" }}
+            _active={{ bg: "#E893CF" }}
             color="white"
             variant="solid"
             size="lg"
@@ -286,7 +329,7 @@ export const Main: React.FC = () => {
             fontSize="1.5rem"
           >
             Join Waitlist
-          </Button>
+          </MotionButton>
         </NextLink>
         <MotionImage
           animate={{ x: [25, -10, 0] }}
