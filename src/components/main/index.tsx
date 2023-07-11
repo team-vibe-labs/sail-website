@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Box,
   Center,
@@ -19,6 +19,7 @@ import { motion } from "framer-motion";
 import { Footer, Header } from "@components";
 
 export const Main: React.FC = () => {
+  const imageRef = useRef<HTMLImageElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const MotionText = motion(Text);
   const MotionImage = motion(Image);
@@ -27,21 +28,27 @@ export const Main: React.FC = () => {
   const MotionCenter = motion(Center);
   const MotionSpinner = motion(Spinner);
 
+  useEffect(() => {
+    if (isLoading && imageRef.current?.complete) {
+      setIsLoading(false);
+    }
+  }, []);
+
   if (isLoading) {
     return (
       <MotionCenter
         minH="100vh"
-        animate={{ backgroundColor: ["#E893CF", "#FFFFFF"] }}
-        transition={{ duration: 1 }}
+        animate={{ backgroundColor: ["#E893CF", "#FFFFFF", "#E893CF"] }}
+        transition={{ duration: 2, repeat: Infinity }}
       >
         <MotionSpinner
-          animate={{ color: ["#FFFFFF", "#E893CF"] }}
-          transition={{ duration: 1 }}
+          animate={{ color: ["#FFFFFF", "#E893CF", "#FFFFFF"] }}
+          transition={{ duration: 2, repeat: Infinity }}
           size="xl"
           thickness="0.4em"
         />
         <Image
-          // Display loading page until biggest image loads in
+          ref={imageRef}
           display="none"
           onLoad={() => setIsLoading(false)}
           src="https://d1zzqqpsok2fq2.cloudfront.net/p1.jpg"
