@@ -7,43 +7,16 @@ import {
   Avatar,
   AvatarBadge,
   Flex,
-  Image,
   Button,
   Spacer,
   Show,
   Spinner,
+  Image,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { motion } from "framer-motion";
 
 import { Footer, Header } from "@components";
-
-const loadingCircle = {
-  display: "block",
-  width: "1rem",
-  height: "1rem",
-  backgroundColor: "black",
-  borderRadius: "0.5rem",
-};
-
-const loadingContainerVariants = {
-  start: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-  end: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
-
-const loadingCircleTransition = {
-  duration: 0.5,
-  yoyo: Infinity,
-  ease: "easeInOut",
-};
 
 export const Main: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -56,18 +29,18 @@ export const Main: React.FC = () => {
 
   setTimeout(() => {
     setIsLoading(false);
-  }, 2000);
+  }, 1000);
 
   if (isLoading) {
     return (
       <MotionCenter
         minH="100vh"
         animate={{ backgroundColor: ["#E893CF", "#FFFFFF"] }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1 }}
       >
         <MotionSpinner
           animate={{ color: ["#FFFFFF", "#E893CF"] }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
           size="xl"
           thickness="0.4em"
         />
@@ -272,7 +245,7 @@ export const Main: React.FC = () => {
               right={{ base: "0px", md: "350px" }}
               zIndex={{ base: 0, md: -1000 }}
               size="lg"
-              src="https://d1zzqqpsok2fq2.cloudfront.net/r8.png"
+              src="https://d1zzqqpsok2fq2.cloudfront.net/r10.png"
               border="0.1em solid black"
             >
               <AvatarBadge bg="white" boxSize="1.3em">
