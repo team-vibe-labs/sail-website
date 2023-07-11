@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
-  useTheme,
   Center,
   Heading,
   Text,
@@ -12,14 +11,32 @@ import {
   Button,
   Spacer,
   Show,
-  Fade,
+  Spinner,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { motion } from "framer-motion";
 
 import { Footer, Header } from "@components";
 
 export const Main: React.FC = () => {
-  const theme = useTheme();
+  const [isLoading, setIsLoading] = useState(true);
+  const MotionText = motion(Text);
+  const MotionImage = motion(Image);
+  const MotionAvatar = motion(Avatar);
+  const MotionSpinner = motion(Spinner);
+
+  setTimeout(() => {
+    setIsLoading(false);
+  }, 1000);
+
+  if (isLoading) {
+    return (
+      <Center minH="100vh">
+        <MotionSpinner size="xl" thickness="0.4em" color="#E893CF" />
+      </Center>
+    );
+  }
+
   return (
     <Box
       textAlign="center"
@@ -30,7 +47,8 @@ export const Main: React.FC = () => {
       maxW={"100%"}
       overflowX="hidden"
     >
-      <Image
+      <MotionImage
+        animate={{ x: [-25, 10, 0], y: [-25, 10, 0] }}
         mx="auto"
         position="absolute"
         w={{ base: "600px", md: "690px" }}
@@ -41,48 +59,56 @@ export const Main: React.FC = () => {
       />
       <Box minW="140vw" minH="100vh" position="relative">
         <Header />
-        <Image
+        <MotionImage
           pt={{ base: 6, md: 0 }}
+          animate={{ y: [-50, 10, 0] }}
           mx="auto"
           w="454px"
           h="162px"
           src="https://d1zzqqpsok2fq2.cloudfront.net/sailed-logo.png"
         />
-        <Text
+        <MotionText
           mt={-4}
           color="black"
           fontSize={{ base: "4xl", md: "5xl" }}
           fontWeight="bold"
+          animate={{ y: [-50, 10, 0] }}
           mb={0}
         >
           Match your friends
-        </Text>
+        </MotionText>
         <Box mb={8}>
           <Flex>
-            <Image
+            <MotionImage
               marginLeft="auto"
+              animate={{ x: [-100, 25, 0], opacity: [0, 1] }}
               marginRight={-5}
               boxSize={{ base: "11em", md: "20em" }}
               borderRadius="full"
               src="https://d1zzqqpsok2fq2.cloudfront.net/p1.jpg"
               border="0.25em solid"
             />
-            <Image
+            <MotionImage
               marginRight="auto"
+              animate={{ x: [100, -25, 0], opacity: [0, 1] }}
               boxSize={{ base: "11em", md: "20em" }}
               borderRadius="full"
               src="https://d1zzqqpsok2fq2.cloudfront.net/p2.png"
               border="0.25em solid"
             />
           </Flex>
-          <Image
+          <MotionImage
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ repeat: Infinity, duration: 2 }}
             mt="-2em"
             mx="auto"
             height={{ base: "4em", md: "6em" }}
             src="https://d1zzqqpsok2fq2.cloudfront.net/heart.png"
           />
           <Show above="md">
-            <Avatar
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "400px" }}
               left={{ base: "0px", md: "450px" }}
@@ -94,8 +120,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 👍
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "550px" }}
               left={{ base: "0px", md: "550px" }}
@@ -107,8 +135,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 ⛵
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "475px" }}
               left={{ base: "0px", md: "350px" }}
@@ -120,8 +150,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 👿
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "345px" }}
               left={{ base: "0px", md: "315px" }}
@@ -133,8 +165,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 🍵
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "245px" }}
               left={{ base: "0px", md: "543px" }}
@@ -146,8 +180,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 💀
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "440px" }}
               right={{ base: "0px", md: "540px" }}
@@ -159,8 +195,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 🥰
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "250px" }}
               right={{ base: "0px", md: "570px" }}
@@ -172,8 +210,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 🙌
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "350px" }}
               right={{ base: "0px", md: "450px" }}
@@ -185,8 +225,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 👍
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "260px" }}
               right={{ base: "0px", md: "350px" }}
@@ -198,8 +240,10 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 💖
               </AvatarBadge>
-            </Avatar>
-            <Avatar
+            </MotionAvatar>
+            <MotionAvatar
+              animate={{ opacity: [0, 1] }}
+              transition={{ ease: "anticipate", duration: 3 }}
               position={{ base: "relative", md: "absolute" }}
               top={{ base: "0px", md: "535px" }}
               right={{ base: "0px", md: "470px" }}
@@ -211,12 +255,19 @@ export const Main: React.FC = () => {
               <AvatarBadge bg="white" boxSize="1.3em">
                 🚩
               </AvatarBadge>
-            </Avatar>
+            </MotionAvatar>
           </Show>
         </Box>
         <Flex mt={{ base: "-3em", md: "-5em" }} mx="auto" width="22rem">
           <Spacer />
-          <Image
+          <MotionImage
+            animate={{ y: [-5, 5, -5] }}
+            transition={{
+              from: 0,
+              duration: 2,
+              repeat: Infinity,
+              ease: "linear",
+            }}
             w={{ base: "67px", md: "67px" }}
             src="https://d1zzqqpsok2fq2.cloudfront.net/new-doodle.png"
           />
@@ -237,7 +288,8 @@ export const Main: React.FC = () => {
             Join Waitlist
           </Button>
         </NextLink>
-        <Image
+        <MotionImage
+          animate={{ x: [25, -10, 0] }}
           overflowX="hidden"
           mx="auto"
           position="absolute"
@@ -259,7 +311,14 @@ export const Main: React.FC = () => {
         m={10}
       >
         <Box>
-          <Image
+          <MotionImage
+            animate={{ rotate: 360 }}
+            transition={{
+              from: 0,
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear",
+            }}
             overflowX="hidden"
             mx="auto"
             position="absolute"
@@ -303,7 +362,14 @@ export const Main: React.FC = () => {
           >
             FAQ
           </Heading>
-          <Image
+          <MotionImage
+            animate={{ rotate: 0 }}
+            transition={{
+              from: 360,
+              duration: 10,
+              repeat: Infinity,
+              ease: "linear",
+            }}
             overflowX="hidden"
             mx="auto"
             position="absolute"
