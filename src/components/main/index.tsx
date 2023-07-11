@@ -27,10 +27,6 @@ export const Main: React.FC = () => {
   const MotionCenter = motion(Center);
   const MotionSpinner = motion(Spinner);
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 1000);
-
   if (isLoading) {
     return (
       <MotionCenter
@@ -43,6 +39,12 @@ export const Main: React.FC = () => {
           transition={{ duration: 1 }}
           size="xl"
           thickness="0.4em"
+        />
+        <Image
+          // Display loading page until biggest image loads in
+          display="none"
+          onLoad={() => setIsLoading(false)}
+          src="https://d1zzqqpsok2fq2.cloudfront.net/p1.jpg"
         />
       </MotionCenter>
     );
